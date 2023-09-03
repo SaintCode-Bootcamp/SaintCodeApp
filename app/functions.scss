@@ -1,0 +1,10 @@
+@function vw($value, $base: 375) {
+  @return $value / $base * 100vw;
+}
+@function vh($value, $base: 844) {
+  @return $value / $base * 100vh;
+}
+
+$background: #252628;
+$green: #59F881;
+$violet: #AF7CFA;

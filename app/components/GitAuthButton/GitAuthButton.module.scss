@@ -1,0 +1,23 @@
+@import 'app/functions';
+
+.gh__btn {
+  width: vw(335);
+  height: vw(50);
+  background-color: #2E2E30;
+  border: solid vw(1) $green;
+  border-radius: vw(5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.gh__title{
+  font-size: vw(24);
+  color: #FFFFFF;
+}
+
+.gh__icon{
+  width: vw(34);
+    height: vw(34);
+}
