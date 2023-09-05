@@ -37,6 +37,8 @@
     "react/prop-types": "off",
     "import/no-unresolved": "off",
     "import/extensions": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-param-reassign": "off",
+    "implicit-arrow-linebreak": "off"
   }
 }
