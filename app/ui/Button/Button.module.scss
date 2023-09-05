@@ -1,0 +1,24 @@
+@import 'app/functions';
+
+.btn {
+  cursor: pointer;
+  border: none;
+  width: vw(335);
+  min-width: 335px;
+  height: vh(55);
+  min-height: 55px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #151515;
+}
+
+.btn__check {
+  background: $green;
+}
+
+.btn__wrong{
+  background: $red;
+}
