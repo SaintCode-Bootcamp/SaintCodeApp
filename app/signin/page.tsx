@@ -8,8 +8,8 @@ import logo from './assets/svg/logo.svg';
 const SignIn = async () => (
   <div className={cn(s.si__background)}>
     <div className={cn(s.si__logo)}>
-      <Image src={samurai} alt="" className={cn(s.si__samurai)} />
-      <Image src={logo} alt="" className={cn(s.si__title)} />
+      <Image src={samurai} alt="samurai" className={cn(s.si__samurai)} />
+      <Image src={logo} alt="logo" className={cn(s.si__title)} />
     </div>
     <div className={cn(s.si__buttons)}>
       <GitAuthButton />
