@@ -2,12 +2,17 @@
 import s from './ProgressRing.module.scss';
 import cn from '@/shared/lib/cn/cn';
 
-function ProgressRing({ userProgress, color }) {
+interface ProgressRingProps {
+  userProgress: number;
+  color: string;
+}
+
+function ProgressRing({ userProgress, color }: ProgressRingProps) {
   let radius = 4.73;
   let circumference = radius * 2 * Math.PI;
   let offset = circumference;
 
-  function setProgress(percent) {
+  function setProgress(percent: number) {
     offset = circumference - (percent / 100) * circumference;
   }
 
