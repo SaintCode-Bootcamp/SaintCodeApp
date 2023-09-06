@@ -4,10 +4,10 @@ import IconName from 'IconsEnum';
 /* eslint-disable */
 
 interface IconProps {
-  className: string;
+  className?: string;
   name: IconName;
-  size: number;
-  color: string;
+  size?: number;
+  color?: string;
 }
 
 const Icon: React.FC<IconProps> = ({ className, name, size, color }) => {

@@ -45,7 +45,7 @@ function Menu() {
               <p className={cn(s.me__text_secondary)}>Достижений получено: </p>
               <p className={cn(s.me__text_primary)}>12</p>
             </div>
-            <ProgressRing color="green" userProgress={52} />
+            <ProgressRing color="green" userProgress={0} />
           </div>
         </div>
       </div>
