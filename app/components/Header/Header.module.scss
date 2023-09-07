@@ -1,0 +1,16 @@
+@import 'app/functions';
+
+.ac__title{
+  font-size: vh(40);
+  color: $white;
+  font-weight: 800;
+  line-height: 120%;
+  background-color: $background; //убрать, когда у фона будет цвет
+    span {
+        color: $green;
+    }
+}
+
+
+
+
