@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ['avatars.githubusercontent.com'],
-  },
-};
+const prod = process.env.NODE_ENV === 'production'
 
-module.exports = nextConfig;
+const withPWA = require('next-pwa')({
+  dest: 'public',
+  disable: prod ? false : true
+})
+
+module.exports = withPWA({
+  // config
+})
