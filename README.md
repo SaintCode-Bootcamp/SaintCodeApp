@@ -10,7 +10,7 @@ This appp uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create 
 npm i
 ```
 
-1. Run app
+2. Run app
 
 ```bash
 npm run dev
