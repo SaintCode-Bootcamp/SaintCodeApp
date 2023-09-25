@@ -1,0 +1,35 @@
+@import 'app/functions';
+.pr__wrapper, .pr__indicator{
+  width: vh(100);
+  height: vh(100);
+
+}
+
+.pr__wrapper{
+  margin-top: vh(15);
+  position: relative;
+}
+
+.pr__indicator_indication, .pr__indicator_track  {
+  cx: vh(50);
+  cy: vh(50);
+  r: vh(40);
+  fill: transparent;
+  stroke-width: vh(15);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.pr__indicator_track {
+  stroke: $background;
+}
+
+.pr__indicator_indication_green {
+  stroke: $green;
+}
+
+.pr__indicator_indication_violet{
+  stroke: $violet
+}
+
+
