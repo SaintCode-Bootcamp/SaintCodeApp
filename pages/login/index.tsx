@@ -1,25 +1,17 @@
+import GitAuthButton from '../../app/components/GitAuthButton/GitAuthButton'
 import styles from '../../styles/Login.module.css'
-import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Login() {
   return (
-    <>
-      <header>
-        <nav>
-          <Link href="/" > Main </Link>
-        </nav>
-      </header>
-      <main>
-        <form className={styles.login}>
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <button type="submit">Login</button>
-        </form>
-      </main>
-
-      <footer>
-        FOOTER
-      </footer>
-    </>
+    <div className={styles.background}>
+      <div className={styles.logo}>
+        <Image src="/svg/samurai.svg" alt="samurai logo" className={styles.samurai} width="100" height="100" />
+        <Image src="/svg/logo.svg" alt="saintcode" className={styles.title} width={100} height={100} />
+      </div>
+      <div className={styles.button}>
+        <GitAuthButton />
+      </div>
+    </div>
   )
 }

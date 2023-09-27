@@ -2,9 +2,7 @@
 
 import { signIn } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
-
-import s from './GitAuthButton.module.scss';
-import cn from '../../../shared/lib/cn/cn';
+import styles from './GitAuthButton.module.css';
 import Icons from '../../../shared/lib/Icons';
 import IconsEnum from '../../../shared/lib/Icons/IconsEnum';
 
@@ -15,12 +13,12 @@ function GitAuthButton() {
 
   return (
     <button
-      className={cn(s.gh__btn)}
+      className={styles.gh__btn}
       type="button"
       onClick={() => signIn('github', { callbackUrl:"/menu" })}
     >
-      <span className={cn(s.gh__title)}> Войти через GitHub </span>
-      <Icons className={s.gh__icon} name={IconsEnum.GitHub} />
+      <span className={styles.gh__title}> Войти через GitHub </span>
+      <Icons className={styles.gh__icon} name={IconsEnum.GitHub} />
     </button>
   );
 }
