@@ -1,0 +1,32 @@
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.line_progress {
+  border: 5px dashed #000; /* Толщина границы и стиль (пунктир) */
+  padding: 10px; /* Для визуальной отделки */
+  border-collapse: collapse;
+  width: 450px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+
+ /* position: relative; */
+}
+
+.line_progress:not(.line_progress:last-child) {
+  border-bottom: none;
+}
+
+.line_progress:nth-child(even) {
+  border-left: none;
+  justify-content: end;
+
+}
+
+.line_progress:nth-child(odd) {
+  border-right: none;
+}

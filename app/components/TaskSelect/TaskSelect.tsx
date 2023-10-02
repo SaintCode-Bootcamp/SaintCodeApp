@@ -33,8 +33,7 @@ function TaskSelect({chapter,progress, id}: TaskSelectProps) {
       taskSrc = lockedChapterTask
   }
   return (
-    <div className={cn(s.ts__container, {[s.ts__position_left]: id % 2 != 0,
-      [s.ts__position_right]: id % 2 == 0})}>
+    <div >
       <Image src={taskSrc} alt="task" className={cn(s.ts__task)} />
       {(progress !== 100) && <PercentProgress progress={progress}/>}
       {(progress === 100) && <Image src={check} alt="check" className={cn(s.ts__check)}/>}

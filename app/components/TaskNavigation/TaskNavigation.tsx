@@ -2,6 +2,7 @@ import cn from '../../../shared/lib/cn/cn';
 import s from '../TaskNavigation/TaskNavigation.module.scss';
 import ChapterTitle from '../ChapterTitle/ChapterTitle';
 import TaskSelect from '../TaskSelect/TaskSelect';
+import styles from './TaskNavigation.module.css'
 
 function TaskNavigation() {
   // Независимо от того, в каком формате придут данные с бека, нужно будет их обязательно трансформировать в два массива, первый - chapter title (думаю можно вытащить из usert level stat по ключу chapter_id), второй - думаю оттуда же, но нужно продумать, как сделать калькуляцию прогресса (или это на беке будет?)
@@ -82,11 +83,32 @@ function TaskNavigation() {
     });
   }
 
+  // <div className="container">
+  //   <div className="article"><img/></div>
+  //   <div className="article"><img /></div>
+  //   <div className="article"><img/></div>
+  // </div>;
+
   const chapterObjects = createChapterObjects(chapters, tasks);
   console.log(chapterObjects);
 
   return (
-    <div className={cn(s.cn__container)}>
+    <div>
+      {chapterObjects.map((el) => (
+        <div>
+          <ChapterTitle id={el.id} title={el.title} text={el.text} />
+          <div className={styles.progress}>
+            
+            {el.tasks.map((el) => (
+              <div className={styles.line_progress}>
+                <TaskSelect chapter={el.chapter} progress={el.progress} id={el.id}/>
+              </div>
+            ))}
+          
+          </div>
+        </div>
+      ))}
+
       <ChapterTitle {...chapters[0]} />
       {tasks
         .filter((el) => el.chapter === 1)
