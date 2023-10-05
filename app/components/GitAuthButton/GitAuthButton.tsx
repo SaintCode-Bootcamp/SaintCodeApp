@@ -15,7 +15,7 @@ function GitAuthButton() {
     <button
       className={styles.gh__btn}
       type="button"
-      onClick={() => signIn('github', { callbackUrl:"/menu" })}
+      onClick={() => signIn('github', { callbackUrl })}
     >
       <span className={styles.gh__title}> Войти через GitHub </span>
       <Icons className={styles.gh__icon} name={IconsEnum.GitHub} />

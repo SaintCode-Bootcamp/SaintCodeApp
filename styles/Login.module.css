@@ -1,7 +1,7 @@
 .background {
   width: 100vw;
   height: 100vh;
-  background-image: url("/svg/background.svg");
+  background-image: url("../public/svg/background.svg");
   background-position: 0 100% ;
   background-repeat: no-repeat ;
   background-size: 100% auto;

@@ -27,7 +27,11 @@ const authConfig: AuthOptions = {
     },
   },
   pages: {
+<<<<<<< HEAD
     signIn: '/signin',
+=======
+    login: '/login',
+>>>>>>> 60adfff (sass to ccs)
   },
   secret: process.env.NEXTAUTH_SECRET,
 };

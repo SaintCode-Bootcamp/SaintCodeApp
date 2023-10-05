@@ -1,8 +1,12 @@
 import GitAuthButton from '../../app/components/GitAuthButton/GitAuthButton'
 import styles from '../../styles/Login.module.css'
 import Image from 'next/image'
+import { useSession } from 'next-auth/react';
 
 export default function Login() {
+  // проверка чтобы видеть аунтификацию в билде удалить
+  console.log(useSession());
+  //
   return (
     <div className={styles.background}>
       <div className={styles.logo}>
