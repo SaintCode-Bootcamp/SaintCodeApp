@@ -9,8 +9,15 @@ This appp uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create 
 ```bash
 npm i
 ```
+2. Add .env file that will have following variables
+```bash
+GH_CLIENT_SECRET=""
+GH_CLIENT_ID=""
+NEXTAUTH_SECRET=""
+NEXTAUTH_URL=""
+```
 
-2. Run app
+3. Run app
 
 ```bash
 npm run dev
