@@ -1,21 +1,19 @@
-
 .gh__btn {
   padding: 0.3rem 1rem 0.3rem 1rem;
-  background-color: #2E2E30;
+  background-color: #2e2e30;
   border: solid 0.125rem var(--green);
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
-
 }
 
-.gh__title{
+.gh__title {
   font-size: 1.8rem;
   color: var(--white);
 }
 
-.gh__icon{
-  width:4rem;
+.gh__icon {
+  width: 4rem;
   padding: 0.5rem;
 }

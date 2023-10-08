@@ -19,7 +19,6 @@ const options: AuthOptions = {
     // async session({ session, token }) {
     //   session.accessToken = token.accessToken;
     //   session.user.id = token.id;
-
     //   return session;
     // },
   },

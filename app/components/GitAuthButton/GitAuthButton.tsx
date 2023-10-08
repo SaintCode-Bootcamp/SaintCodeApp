@@ -8,8 +8,9 @@ import IconsEnum from '../../../shared/lib/Icons/IconsEnum';
 
 function GitAuthButton() {
   const searchParams = useSearchParams();
-  // @ts-ignore
-  const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const callbackUrl = searchParams
+    ? searchParams.get('callbackUrl') || '/'
+    : '/';
 
   return (
     <button

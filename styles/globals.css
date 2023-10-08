@@ -1,17 +1,17 @@
-html{
+html {
   color-scheme: light dark;
   --background: #252628;
-  --green: #59F881;
-  --violet: #AF7CFA;
+  --green: #59f881;
+  --violet: #af7cfa;
   --white: #fff;
 }
-body{
+body {
   background-color: var(--background);
 }
 
 * {
   box-sizing: border-box;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   padding: 0;
   margin: 0;
