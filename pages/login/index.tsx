@@ -11,14 +11,14 @@ export default function Login() {
     <div className={styles.background}>
       <div className={styles.logo}>
         <Image
-          src="/svg/samurai.svg"
+          src="./svg/samurai.svg"
           alt="samurai logo"
           className={styles.samurai}
           width="100"
           height="100"
         />
         <Image
-          src="/svg/logo.svg"
+          src="./svg/logo.svg"
           alt="saintcode"
           className={styles.title}
           width={100}
