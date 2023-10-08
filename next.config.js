@@ -11,6 +11,7 @@ module.exports = withPWA({
 })
 
 const nextConfig = {
+  output: 'export',
   images: {
     domains: ['avatars.githubusercontent.com'],
   },
