@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <header>
         <nav>
-          <Link href="/login">Login</Link>
+          <Link href="login">Login</Link>
         </nav>
       </header>
       <main>INFO</main>
