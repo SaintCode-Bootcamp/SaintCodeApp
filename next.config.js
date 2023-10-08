@@ -11,7 +11,7 @@ module.exports = withPWA({
 })
 
 const nextConfig = {
-  assetPrefix: process.env.NEXTAUTH_URL,
+  assetPrefix: prod ? process.env.NEXTAUTH_URL : undefined,
   output: 'export',
   images: {
     unoptimized: true,
