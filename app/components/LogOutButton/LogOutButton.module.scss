@@ -1,0 +1,19 @@
+@import 'app/functions';
+
+.so__btn {
+  margin-top: vh(25);
+  width: vw(50);
+  height: vh(25);
+  border: solid vw(1) $violet;
+  border-radius: vw(5);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $background;
+
+}
+
+.so__title{
+  font-size: vh(14);
+  color: $violet;
+}
