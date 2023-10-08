@@ -8,10 +8,10 @@ const withPWA = require('next-pwa')({
 
 module.exports = withPWA({
   // config
-  assetPrefix: prod ? process.env.NEXTAUTH_URL : undefined,
 })
 
 const nextConfig = {
+  assetPrefix: prod ? process.env.NEXTAUTH_URL : undefined,
   output: 'export',
   images: {
     unoptimized: true,
