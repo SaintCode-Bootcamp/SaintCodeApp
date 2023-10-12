@@ -6,6 +6,7 @@ import secondChapterTask from './assets/second_chapter_task.svg'
 import lockedChapterTask from './assets/locked_chapter_task.svg'
 import check from './assets/check.svg'
 import PercentProgress from "../PercentProgress/PercentProgress";
+import styles from './TaskSelect.module.css'
 
 interface TaskSelectProps{
   chapter: number;
@@ -16,9 +17,8 @@ interface TaskSelectProps{
 function TaskSelect({chapter,progress, id}: TaskSelectProps) {
   let taskSrc = '';
   if (progress === 0) return (
-    <div className={cn(s.ts__container, {[s.ts__position_left]: id % 2 != 0,
-      [s.ts__position_right]: id % 2 == 0})}>
-      <Image src={lockedChapterTask} alt="task" className={cn(s.ts__task)} />
+    <div className={styles.container}>
+      <Image src={lockedChapterTask} alt="task" className={styles.overlay} />
     </div>
   );
   else
@@ -33,10 +33,17 @@ function TaskSelect({chapter,progress, id}: TaskSelectProps) {
       taskSrc = lockedChapterTask
   }
   return (
-    <div >
-      <Image src={taskSrc} alt="task" className={cn(s.ts__task)} />
-      {(progress !== 100) && <PercentProgress progress={progress}/>}
-      {(progress === 100) && <Image src={check} alt="check" className={cn(s.ts__check)}/>}
+    <div className={styles.container}>
+      <Image src={taskSrc} alt="task" />
+      <div className={styles.overlay}>
+        {progress !== 100 && <PercentProgress progress={progress} />}
+        {progress === 100 && (
+          <Image src={check} alt="check" className={styles.check } />
+        )}
+      </div>
+
+      {/* {(progress !== 100) && <PercentProgress progress={progress}/>}
+      {(progress === 100) && <Image src={check} alt="check" />} */}
       {/*<TaskLine/>*/}
     </div>
   );

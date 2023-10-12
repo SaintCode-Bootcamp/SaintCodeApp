@@ -1,14 +1,11 @@
-import cn from '../../../shared/lib/cn/cn';
-import s from "./PercentProgress.module.scss"
+import styles from './PercentProgress.module.css';
 
 interface PercentProgressProps {
-  progress: number
+  progress: number;
 }
 
-function PercentProgress({progress}: PercentProgressProps) {
-  return (
-    <span className={cn(s.pp__percent)}>{progress}%</span>
-  );
+function PercentProgress({ progress }: PercentProgressProps) {
+  return <span className={styles.pp__percent}>{progress}%</span>;
 }
 
-export default PercentProgress ;
+export default PercentProgress;

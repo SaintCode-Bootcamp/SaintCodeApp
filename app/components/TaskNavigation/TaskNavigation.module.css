@@ -6,27 +6,118 @@
 }
 
 .line_progress {
-  border: 5px dashed #000; /* Толщина границы и стиль (пунктир) */
-  padding: 10px; /* Для визуальной отделки */
+ 
   border-collapse: collapse;
-  width: 450px;
-  height: 250px;
+  
+  width: 20vw;
+  height: 12vw;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  
+}
 
- /* position: relative; */
+/* .line_progress:nth-child()::after {
+  content: "";
+  position: absolute;
+  top: 0; 
+ right: 5;
+  width: 5px;
+  height: 50%;
+  border-right: 5px dashed rgb(128, 0, 0);
+} */
+
+.first_line {
+  height: 6vw;
+  width: 10px;
+  border-left: 5px salmon dashed;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(even) > .first_line {
+  background: #55cc76;
+}
+
+.green_line_one {
+  height: 6vw;
+  width: 0px;
+  border-left: 5px #55cc76 dashed;
+ 
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+.task_select {
+  z-index: 20;
+}
+
+.line_progress:nth-child(odd) > .task_select {
+  transform: translate(-10vw, 0);
+}
+
+.line_progress:nth-child(odd) > .green_line_one{
+  transform: translate(-10vw, 0);
+}
+.line_progress:nth-child(even) > .task_select {
+  transform: translate(10vw, 0);
+}
+.line_progress:nth-child(even) > .green_line_one{
+  transform: translate(10vw, 0);
+}
+
+.green_line_two {
+  height: 12vw;
+  width: 20vw;
+  position: absolute;
+  border-bottom: 5px #55cc76 dashed;;
+}
+
+.green_line_tree {
+  height: 4vw;
+  width: 0px;
+  border-left: 5px #55cc76 dashed;
+ 
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.line_progress:nth-child(even) > .green_line_tree{
+  transform: translate(-10vw, 0);
+}
+.line_progress:nth-child(odd) > .green_line_tree{
+  transform: translate(10vw, 0);
+}
+
+/* .progress:first-child {
+  border: 5px dashed #55CC76;
 }
 
 .line_progress:not(.line_progress:last-child) {
   border-bottom: none;
 }
 
-.line_progress:nth-child(even) {
+.line_progress:nth-child(2) {
   border-left: none;
-  justify-content: end;
+  background: red;
+
+  
 
 }
+
+.line_progress:nth-child(even) > div {
+  
+}
+
 
 .line_progress:nth-child(odd) {
   border-right: none;
+  justify-self: center;
 }
+
+.line_progress:nth-child(odd) > div {
+  
+} */

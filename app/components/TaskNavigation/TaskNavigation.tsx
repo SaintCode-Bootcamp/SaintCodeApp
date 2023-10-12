@@ -2,7 +2,7 @@ import cn from '../../../shared/lib/cn/cn';
 import s from '../TaskNavigation/TaskNavigation.module.scss';
 import ChapterTitle from '../ChapterTitle/ChapterTitle';
 import TaskSelect from '../TaskSelect/TaskSelect';
-import styles from './TaskNavigation.module.css'
+import styles from './TaskNavigation.module.css';
 
 function TaskNavigation() {
   // Независимо от того, в каком формате придут данные с бека, нужно будет их обязательно трансформировать в два массива, первый - chapter title (думаю можно вытащить из usert level stat по ключу chapter_id), второй - думаю оттуда же, но нужно продумать, как сделать калькуляцию прогресса (или это на беке будет?)
@@ -93,23 +93,55 @@ function TaskNavigation() {
   console.log(chapterObjects);
 
   return (
-    <div>
+    <div className="section_container">
       {chapterObjects.map((el) => (
         <div>
           <ChapterTitle id={el.id} title={el.title} text={el.text} />
           <div className={styles.progress}>
-            
             {el.tasks.map((el) => (
               <div className={styles.line_progress}>
-                <TaskSelect chapter={el.chapter} progress={el.progress} id={el.id}/>
+                <div className={styles.task_select}>
+                  <TaskSelect
+                    chapter={el.chapter}
+                    progress={el.progress}
+                    id={el.id}
+                  />
+                </div>
+                <div className={styles.task_select}></div>
+                <span
+                  className={
+                    el.progress == 0
+                      ? styles.empty_line_one
+                      : el.chapter == 1
+                      ? styles.green_line_one
+                      : styles.violet_line_one
+                  }
+                ></span>
+                <span
+                  className={
+                    el.progress == 0
+                      ? styles.empty_line_two
+                      : el.chapter == 1
+                      ? styles.green_line_two
+                      : styles.violet_line_two
+                  }
+                ></span>
+                <span
+                  className={
+                    el.progress == 0
+                      ? styles.empty_line_tree
+                      : el.chapter == 1
+                      ? styles.green_line_tree
+                      : styles.violet_line_tree
+                  }
+                ></span>
               </div>
             ))}
-          
           </div>
         </div>
       ))}
 
-      <ChapterTitle {...chapters[0]} />
+      {/* <ChapterTitle {...chapters[0]} />
       {tasks
         .filter((el) => el.chapter === 1)
         .map((el) => (
@@ -120,7 +152,7 @@ function TaskNavigation() {
         .filter((el) => el.chapter === 2)
         .map((el) => (
           <TaskSelect {...el} />
-        ))}
+        ))} */}
     </div>
   );
 }
