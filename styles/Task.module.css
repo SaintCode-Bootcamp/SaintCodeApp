@@ -1,0 +1,6 @@
+.task:nth-child(odd){
+   margin-left: -4rem;
+}
+.task:nth-child(even){
+    margin-right: 4rem;
+ }

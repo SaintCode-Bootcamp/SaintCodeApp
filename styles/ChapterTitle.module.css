@@ -1,0 +1,16 @@
+.ribbon{
+    background: var(--darkGreen);
+    padding: 1rem;
+}
+.title{
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--white);
+}
+.description{
+    display: flex;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--white);
+}
