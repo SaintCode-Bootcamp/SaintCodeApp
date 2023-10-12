@@ -1,7 +1,9 @@
+
 html{
   color-scheme: light dark;
   --background: #252628;
   --green: #59F881;
+  --darkGreen: #314E39;
   --violet: #AF7CFA;
   --white: #fff;
 }

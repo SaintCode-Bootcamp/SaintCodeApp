@@ -6,7 +6,7 @@ import secondChapterTask from './assets/second_chapter_task.svg'
 import lockedChapterTask from './assets/locked_chapter_task.svg'
 import check from './assets/check.svg'
 import PercentProgress from "../PercentProgress/PercentProgress";
-
+import styles from '../../../styles/Task.module.css'
 interface TaskSelectProps{
   chapter: number;
   progress: number;
@@ -33,8 +33,8 @@ function TaskSelect({chapter,progress, id}: TaskSelectProps) {
       taskSrc = lockedChapterTask
   }
   return (
-    <div >
-      <Image src={taskSrc} alt="task" className={cn(s.ts__task)} />
+    <div className={styles.task}>
+      <Image src={taskSrc} alt="task"  />
       {(progress !== 100) && <PercentProgress progress={progress}/>}
       {(progress === 100) && <Image src={check} alt="check" className={cn(s.ts__check)}/>}
       {/*<TaskLine/>*/}

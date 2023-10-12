@@ -1,5 +1,5 @@
-import cn from '../../../shared/lib/cn/cn';
-import s from './ChapterTitle.module.scss';
+
+import styles from '../../../styles/ChapterTitle.module.css'
 
 interface ChapterTitleProps {
   title: string;
@@ -9,13 +9,9 @@ interface ChapterTitleProps {
 
 function ChapterTitle({title, text, id}: ChapterTitleProps) {
   return (
-    <div className={cn(s.ct__container,{
-      [s.ct__green]: id === 1,
-      [s.ct__violet]: id === 2,
-    })
-    }>
-      <h2 className={cn(s.ct__title)}>{title}</h2>
-      <p className={cn(s.ct__text)}>{text}</p>
+    <div className={styles.ribbon}>
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.description}>{text}</p>
     </div>
   );
 }
