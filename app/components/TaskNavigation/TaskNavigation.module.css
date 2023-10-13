@@ -3,68 +3,50 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 4vw;
+}
+
+.section_container > .chapter_container:nth-child(2) > .progress {
+  margin-top: 4vw;
 }
 
 .line_progress {
- 
-  border-collapse: collapse;
-  
   width: 20vw;
   height: 12vw;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  
 }
-
-/* .line_progress:nth-child()::after {
-  content: "";
-  position: absolute;
-  top: 0; 
- right: 5;
-  width: 5px;
-  height: 50%;
-  border-right: 5px dashed rgb(128, 0, 0);
-} */
-
-.first_line {
-  height: 6vw;
-  width: 10px;
-  border-left: 5px salmon dashed;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
+.section_container:nth-child(1) .line_progress:nth-child(odd) > .task_select {
+  transform: translate(-10vw, 0);
 }
-
-.line_progress:nth-child(even) > .first_line {
-  background: #55cc76;
-}
-
-.green_line_one {
-  height: 6vw;
-  width: 0px;
-  border-left: 5px #55cc76 dashed;
- 
-  position: absolute;
-  z-index: 1;
-  top: 50%;
+.section_container:nth-child(1) .line_progress:nth-child(even) > .task_select {
+  transform: translate(10vw, 0);
 }
 .task_select {
   z-index: 20;
 }
 
-.line_progress:nth-child(odd) > .task_select {
+/* .section_container > .chapter_container:nth-child(2) .line_progress:nth-child(odd) > .task_select {
+  transform: translate(20vw, 0);
+} */
+
+.green_line_one {
+  height: 6vw;
+  width: 0px;
+  border-left: 5px #55cc76 dashed;
+
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(odd) > .green_line_one {
   transform: translate(-10vw, 0);
 }
 
-.line_progress:nth-child(odd) > .green_line_one{
-  transform: translate(-10vw, 0);
-}
-.line_progress:nth-child(even) > .task_select {
-  transform: translate(10vw, 0);
-}
-.line_progress:nth-child(even) > .green_line_one{
+.line_progress:nth-child(even) > .green_line_one {
   transform: translate(10vw, 0);
 }
 
@@ -72,25 +54,138 @@
   height: 12vw;
   width: 20vw;
   position: absolute;
-  border-bottom: 5px #55cc76 dashed;;
+  border-bottom: 5px #55cc76 dashed;
 }
 
 .green_line_tree {
   height: 4vw;
   width: 0px;
   border-left: 5px #55cc76 dashed;
- 
+
   position: absolute;
   z-index: 1;
   top: 100%;
 }
 
-.line_progress:nth-child(even) > .green_line_tree{
+.line_progress:nth-child(even) > .green_line_tree {
+  transform: translate(calc(-10vw + 2.5px), 0);
+}
+.line_progress:nth-child(odd) > .green_line_tree {
+  transform: translate(calc(10vw - 2.5px), 0);
+}
+
+.empty_line_one {
+  height: 6vw;
+  width: 0px;
+  border-left: 5px #444444 dashed;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(odd) > .empty_line_one {
   transform: translate(-10vw, 0);
 }
-.line_progress:nth-child(odd) > .green_line_tree{
+
+.line_progress:nth-child(even) > .empty_line_one {
   transform: translate(10vw, 0);
 }
+
+.empty_line_two {
+  height: 12vw;
+  width: 20vw;
+  position: absolute;
+  border-bottom: 5px #444444 dashed;
+}
+
+.empty_line_tree {
+  height: 4vw;
+  width: 0px;
+  border-left: 5px #444444 dashed;
+
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.line_progress:nth-child(even) > .empty_line_tree {
+  transform: translate(calc(-10vw + 2.5px), 0);
+}
+.line_progress:nth-child(odd) > .empty_line_tree {
+  transform: translate(calc(10vw - 2.5px), 0);
+}
+
+.violet_line_one {
+  height: 6vw;
+  width: 0px;
+  border-left: 5px #a681f2 dashed;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(1) > .violet_line_one {
+  height: 12vw;
+  top: 0;
+  width:20vw;
+  border-top: 5px #a681f2 dashed;
+}
+.line_progress:nth-child(1) > .violet_line_one {
+  transform: translate(0, 0);
+  
+}
+.line_progress:nth-child(1) > .violet_line_one::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 4vw;
+  border-right: 5px dashed #a681f2; 
+  transform: translateY(-100%); 
+}
+.line_progress:nth-child(1) > .empty_line_one::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 4vw;
+  border-right: 5px dashed #444444; 
+  transform: translateY(-150%); 
+}
+
+.line_progress:nth-child(odd):not(1) > .violet_line_one {
+  transform: translate(-10vw, 0);
+}
+
+.line_progress:nth-child(even) > .violet_line_one {
+  transform: translate(10vw, 0);
+}
+.violet_line_two {
+  height: 12vw;
+  width: 20vw;
+  position: absolute;
+  border-bottom: 5px #a681f2 dashed;
+}
+
+.violet_line_tree {
+  height: 4vw;
+  width: 0px;
+  border-left: 5px #a681f2 dashed;
+
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.line_progress:nth-child(even) > .violet_line_tree {
+  transform: translate(calc(-10vw + 2.5px), 0);
+}
+.line_progress:nth-child(odd) > .violet_line_tree {
+  transform: translate(calc(10vw - 2.5px), 0);
+}
+
 
 /* .progress:first-child {
   border: 5px dashed #55CC76;

@@ -40,7 +40,7 @@ function TaskNavigation() {
     {
       id: 1,
       chapter: 1,
-      progress: 25,
+      progress: 0,
     },
     {
       id: 2,
@@ -55,12 +55,17 @@ function TaskNavigation() {
     {
       id: 4,
       chapter: 1,
-      progress: 63,
+      progress: 100,
     },
     {
       id: 5,
       chapter: 2,
-      progress: 30,
+      progress: 0,
+    },
+    {
+      id: 7,
+      chapter: 2,
+      progress: 0,
     },
     {
       id: 6,
@@ -90,24 +95,30 @@ function TaskNavigation() {
   // </div>;
 
   const chapterObjects = createChapterObjects(chapters, tasks);
-  console.log(chapterObjects);
+  console.log(chapterObjects[0].tasks);
 
   return (
-    <div className="section_container">
+    <div className={styles.section_container}>
       {chapterObjects.map((el) => (
-        <div>
+        <div className={styles.chapter_container}>
           <ChapterTitle id={el.id} title={el.title} text={el.text} />
           <div className={styles.progress}>
             {el.tasks.map((el) => (
               <div className={styles.line_progress}>
-                <div className={styles.task_select}>
+                <div
+                  className={
+                    chapterObjects[0].tasks.length % 2 !== 2
+                      ? styles.task_select
+                      : styles.task_select_odd
+                  }
+                >
                   <TaskSelect
                     chapter={el.chapter}
                     progress={el.progress}
                     id={el.id}
                   />
                 </div>
-                <div className={styles.task_select}></div>
+
                 <span
                   className={
                     el.progress == 0
