@@ -1,8 +1,8 @@
 .container {
   position: relative;
   display: inline-block;
-  width: 7vw;
-  height: 7vw;
+  width: 100px;
+  height: 100px;
 }
 
 .overlay {

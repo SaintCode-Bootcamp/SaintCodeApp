@@ -6,6 +6,7 @@ html{
   --darkGreen: #314E39;
   --violet: #AF7CFA;
   --white: #fff;
+  --disabled: #444444;
 }
 body{
   background-color: var(--background);
