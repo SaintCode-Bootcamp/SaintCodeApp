@@ -13,6 +13,9 @@
   }
 }
 
+.section_container {
+  padding-top: 70px;
+}
 /* & выравниваем каракас по середине */
 .progress {
   display: flex;

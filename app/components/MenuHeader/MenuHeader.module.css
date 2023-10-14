@@ -1,25 +1,24 @@
-@import 'app/functions';
 
 .me__header{
   width: 100vw;
-  height: vh(70);
+  height: 70px;
   display: flex;
   justify-content: space-between;
+  padding: 10px 10px 20px 20px;
   align-items: center;
-  padding: 0 vw(20) 0 vw(20);
   position: fixed;
   z-index: 30;
-  background-color: $background;
+  background-color: var(--background);
 }
 
 .me__logo{
-  height: vh(40);
+  height: 40px;
   width: auto;
 }
 
 .me__avatar{
-  height: vh(40);
-  width: vh(40);
-  background-color: $background;
+  height: 40px;
+  width: 40px;
+  background-color: var(--background);
   border-radius: 50%;
 }

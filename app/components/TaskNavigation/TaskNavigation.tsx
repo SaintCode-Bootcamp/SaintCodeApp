@@ -90,54 +90,56 @@ function TaskNavigation() {
   const chapterObjects = createChapterObjects(chapters, tasks);
 
   return (
-    <div className={styles.section_container}>
-      {chapterObjects.map((el) => (
-        <div key={uuidv4()} className={styles.chapter_container}>
-          <ChapterTitle id={el.id} title={el.title} text={el.text} />
-          <div className={styles.progress}>
-            {el.tasks.map((el) => (
-              <div key={uuidv4()} className={styles.line_progress}>
-                <div className={styles.task_select}>
-                  <TaskSelect
-                    chapter={el.chapter}
-                    progress={el.progress}
-                    id={el.id}
-                  />
-                </div>
+    <main>
+      <div className={styles.section_container}>
+        {chapterObjects.map((el) => (
+          <div key={uuidv4()} className={styles.chapter_container}>
+            <ChapterTitle id={el.id} title={el.title} text={el.text} />
+            <div className={styles.progress}>
+              {el.tasks.map((el) => (
+                <div key={uuidv4()} className={styles.line_progress}>
+                  <div className={styles.task_select}>
+                    <TaskSelect
+                      chapter={el.chapter}
+                      progress={el.progress}
+                      id={el.id}
+                    />
+                  </div>
 
-                <span
-                  className={
-                    el.progress == 0
-                      ? styles.empty_line_one
-                      : el.chapter == 1
-                      ? styles.green_line_one
-                      : styles.violet_line_one
-                  }
-                ></span>
-                <span
-                  className={
-                    el.progress == 0
-                      ? styles.empty_line_two
-                      : el.chapter == 1
-                      ? styles.green_line_two
-                      : styles.violet_line_two
-                  }
-                ></span>
-                <span
-                  className={
-                    el.progress == 0
-                      ? styles.empty_line_tree
-                      : el.chapter == 1
-                      ? styles.green_line_tree
-                      : styles.violet_line_tree
-                  }
-                ></span>
-              </div>
-            ))}
+                  <span
+                    className={
+                      el.progress == 0
+                        ? styles.empty_line_one
+                        : el.chapter == 1
+                        ? styles.green_line_one
+                        : styles.violet_line_one
+                    }
+                  ></span>
+                  <span
+                    className={
+                      el.progress == 0
+                        ? styles.empty_line_two
+                        : el.chapter == 1
+                        ? styles.green_line_two
+                        : styles.violet_line_two
+                    }
+                  ></span>
+                  <span
+                    className={
+                      el.progress == 0
+                        ? styles.empty_line_tree
+                        : el.chapter == 1
+                        ? styles.green_line_tree
+                        : styles.violet_line_tree
+                    }
+                  ></span>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </main>
   );
 }
 
