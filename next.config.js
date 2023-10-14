@@ -12,7 +12,6 @@ module.exports = withPWA({
 
 const nextConfig = {
   assetPrefix: prod ? process.env.NEXTAUTH_URL : undefined,
-  output: 'export',
   images: {
     unoptimized: true,
     domains: ['avatars.githubusercontent.com'],

@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid';
 import ChapterTitle from '../ChapterTitle/ChapterTitle';
 import TaskSelect from '../TaskSelect/TaskSelect';
 import styles from './TaskNavigation.module.css';
@@ -22,7 +21,7 @@ function TaskNavigation() {
     tasks: Task[];
   }
 
-  let chapters: Chapter[] = [
+  const chapters: Chapter[] = [
     {
       id: 1,
       title: 'Раздел 1',
@@ -35,7 +34,7 @@ function TaskNavigation() {
     },
   ];
 
-  let tasks: Task[] = [
+  const tasks: Task[] = [
     {
       id: 1,
       chapter: 1,
@@ -75,7 +74,7 @@ function TaskNavigation() {
 
   function createChapterObjects(
     chapters: Chapter[],
-    tasks: Task[]
+    tasks: Task[],
   ): ChapterObject[] {
     return chapters.map((chapter) => {
       const chapterTasks = tasks.filter((task) => task.chapter === chapter.id);
@@ -92,12 +91,12 @@ function TaskNavigation() {
   return (
     <main>
       <div className={styles.section_container}>
-        {chapterObjects.map((el) => (
-          <div key={uuidv4()} className={styles.chapter_container}>
+        {chapterObjects.map((el, index) => (
+          <div key={index} className={styles.chapter_container}>
             <ChapterTitle id={el.id} title={el.title} text={el.text} />
             <div className={styles.progress}>
-              {el.tasks.map((el) => (
-                <div key={uuidv4()} className={styles.line_progress}>
+              {el.tasks.map((el, i) => (
+                <div key={i} className={styles.line_progress}>
                   <div className={styles.task_select}>
                     <TaskSelect
                       chapter={el.chapter}

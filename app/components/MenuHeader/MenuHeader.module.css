@@ -1,5 +1,4 @@
-
-.me__header{
+.me__header {
   width: 100vw;
   height: 70px;
   display: flex;
@@ -11,12 +10,12 @@
   background-color: var(--background);
 }
 
-.me__logo{
+.me__logo {
   height: 40px;
   width: auto;
 }
 
-.me__avatar{
+.me__avatar {
   height: 40px;
   width: 40px;
   background-color: var(--background);

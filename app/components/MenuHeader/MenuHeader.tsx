@@ -4,14 +4,9 @@ import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import SaintCodeLogo from '/public/svg/SaintCodeLogo.svg';
 import placeholder from '/public/svg/Placeholder.svg';
-import styles from './MenuHeader.module.css'
+import styles from './MenuHeader.module.css';
 
-interface MenuHeaderProps{
-  active?: boolean;
-  setActive?: (arg: boolean) => void
-};
-
-function MenuHeader({active, setActive}: MenuHeaderProps) {
+function MenuHeader() {
   const session = useSession();
   const avatar = session?.data?.user?.image;
 

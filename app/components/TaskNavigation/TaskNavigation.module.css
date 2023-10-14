@@ -214,10 +214,9 @@
   top: 100%;
 }
 
-.line_progress:nth-child(even) > .violet_line_tree  {
+.line_progress:nth-child(even) > .violet_line_tree {
   transform: translate(calc(var(--left-shift) + var(--border_width) / 2), 0);
 }
-.line_progress:nth-child(odd) > .violet_line_tree  {
+.line_progress:nth-child(odd) > .violet_line_tree {
   transform: translate(calc(var(--right-shift) - var(--border_width) / 2), 0);
 }
-
