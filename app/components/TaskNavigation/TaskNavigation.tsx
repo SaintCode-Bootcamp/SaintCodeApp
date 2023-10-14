@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import ChapterTitle from '../ChapterTitle/ChapterTitle';
 import TaskSelect from '../TaskSelect/TaskSelect';
 import styles from './TaskNavigation.module.css';
@@ -38,7 +39,7 @@ function TaskNavigation() {
     {
       id: 1,
       chapter: 1,
-      progress: 0,
+      progress: 100,
     },
     {
       id: 2,
@@ -91,11 +92,11 @@ function TaskNavigation() {
   return (
     <div className={styles.section_container}>
       {chapterObjects.map((el) => (
-        <div className={styles.chapter_container}>
+        <div key={uuidv4()} className={styles.chapter_container}>
           <ChapterTitle id={el.id} title={el.title} text={el.text} />
           <div className={styles.progress}>
             {el.tasks.map((el) => (
-              <div className={styles.line_progress}>
+              <div key={uuidv4()} className={styles.line_progress}>
                 <div className={styles.task_select}>
                   <TaskSelect
                     chapter={el.chapter}
