@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap');
 
+/* TODO Шрифт не тот, надо заменить */
+/* @font-face {
+  font-family:'JetBrains Mono', monospace;
+  src: url(../../../public/font/jetbrains-mono-cyrillic-800-normal.woff2);
+} */
+
 .pp__percent {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 2.5vh;
+  font-size: 2rem;
   color: #ffffff;
 }

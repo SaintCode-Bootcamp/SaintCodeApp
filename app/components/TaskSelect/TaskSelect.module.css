@@ -2,17 +2,8 @@
   position: relative;
   display: inline-block;
   width: 7vw;
-  height: 10vw;
-
+  height: 7vw;
 }
-
-/* .container:nth-child(odd) {
-    transform: translate(-50%, 0);
-}
-
-.container:nth-child(even) {
-    transform: translate(70%, 0);
-} */
 
 .overlay {
   position: absolute;
@@ -33,6 +24,6 @@
 }
 
 .check {
-  width: 4.5vw;
-  height: 4.5vw;
+  width: 100%;
+  height: 100%;
 }

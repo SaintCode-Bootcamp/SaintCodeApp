@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import cn from '../../../shared/lib/cn/cn';
-import s from './TaskSelect.module.scss';
 import firstChapterTask from './assets/first_chapter_task.svg'
 import secondChapterTask from './assets/second_chapter_task.svg'
 import lockedChapterTask from './assets/locked_chapter_task.svg'
@@ -41,10 +39,6 @@ function TaskSelect({chapter,progress, id}: TaskSelectProps) {
           <Image src={check} alt="check" className={styles.check } />
         )}
       </div>
-
-      {/* {(progress !== 100) && <PercentProgress progress={progress}/>}
-      {(progress === 100) && <Image src={check} alt="check" />} */}
-      {/*<TaskLine/>*/}
     </div>
   );
 }
