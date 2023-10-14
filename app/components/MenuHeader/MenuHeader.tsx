@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import { useSession } from 'next-auth/react';
-import SaintCodeLogo from '../../../shared/assets/images/SaintCodeLogo.svg';
-import placeholder from './assets/Placeholder.svg';
+import SaintCodeLogo from '/public/svg/SaintCodeLogo.svg';
+import placeholder from '/public/svg/Placeholder.svg';
 import styles from './MenuHeader.module.css'
 
 interface MenuHeaderProps{

@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import firstChapterTask from './assets/first_chapter_task.svg'
-import secondChapterTask from './assets/second_chapter_task.svg'
-import lockedChapterTask from './assets/locked_chapter_task.svg'
-import check from './assets/check.svg'
+import firstChapterTask from '/public/svg/first_chapter_task.svg'
+import secondChapterTask from '/public/svg/second_chapter_task.svg'
+import lockedChapterTask from '/public/svg/locked_chapter_task.svg'
+import check from '/public/svg/check.svg'
 import PercentProgress from "../PercentProgress/PercentProgress";
 import styles from './TaskSelect.module.css'
 
