@@ -96,13 +96,7 @@ function TaskNavigation() {
           <div className={styles.progress}>
             {el.tasks.map((el) => (
               <div className={styles.line_progress}>
-                <div
-                  className={
-                    chapterObjects[0].tasks.length % 2 !== 2
-                      ? styles.task_select
-                      : styles.task_select_odd
-                  }
-                >
+                <div className={styles.task_select}>
                   <TaskSelect
                     chapter={el.chapter}
                     progress={el.progress}
