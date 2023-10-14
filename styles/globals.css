@@ -8,13 +8,13 @@ html{
   --white: #fff;
   --disabled: #444444;
 }
-body{
+body {
   background-color: var(--background);
 }
 
 * {
   box-sizing: border-box;
-  font-family:  sans-serif;
+  font-family: sans-serif;
   font-style: normal;
   padding: 0;
   margin: 0;

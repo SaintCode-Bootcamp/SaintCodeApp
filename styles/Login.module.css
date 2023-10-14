@@ -1,21 +1,21 @@
 .background {
   width: 100vw;
   height: 100vh;
-  background-image: url("/svg/background.svg");
-  background-position: 0 100% ;
-  background-repeat: no-repeat ;
+  background-image: url('../public/svg/background.svg');
+  background-position: 0 100%;
+  background-repeat: no-repeat;
   background-size: 100% auto;
   max-width: 371px;
   margin: auto;
 }
-.logo{
+.logo {
   display: flex;
   height: 50vh;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
-.samurai{
+.samurai {
   width: auto;
   height: auto;
 }
@@ -25,7 +25,7 @@
   height: auto;
 }
 
-.button{
+.button {
   display: flex;
   justify-content: center;
   max-width: 500px;
