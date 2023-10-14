@@ -38,17 +38,17 @@ function TaskNavigation() {
     {
       id: 1,
       chapter: 1,
-      progress: 100,
+      progress: 0,
     },
     {
       id: 2,
       chapter: 1,
-      progress: 100,
+      progress: 0,
     },
     {
       id: 3,
       chapter: 1,
-      progress: 100,
+      progress: 0,
     },
     {
       id: 4,

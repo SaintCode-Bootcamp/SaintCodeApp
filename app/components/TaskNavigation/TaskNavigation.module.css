@@ -6,6 +6,12 @@
   --right-shift: calc(var(--task_width_container) / 2);
   --left-shift: calc((-1) * var(--task_width_container) / 2);
 }
+@media (min-width: 630px) {
+  .section_container {
+    --task_width_container: 300px;
+    --task_height_container: 180px;
+  }
+}
 
 /* & выравниваем каракас по середине */
 .progress {
