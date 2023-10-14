@@ -1,5 +1,3 @@
-import cn from '../../../shared/lib/cn/cn';
-import s from '../TaskNavigation/TaskNavigation.module.scss';
 import ChapterTitle from '../ChapterTitle/ChapterTitle';
 import TaskSelect from '../TaskSelect/TaskSelect';
 import styles from './TaskNavigation.module.css';
@@ -40,7 +38,7 @@ function TaskNavigation() {
     {
       id: 1,
       chapter: 1,
-      progress: 0,
+      progress: 100,
     },
     {
       id: 2,
@@ -50,7 +48,7 @@ function TaskNavigation() {
     {
       id: 3,
       chapter: 1,
-      progress: 25,
+      progress: 100,
     },
     {
       id: 4,
@@ -60,12 +58,12 @@ function TaskNavigation() {
     {
       id: 5,
       chapter: 2,
-      progress: 0,
+      progress: 100,
     },
     {
       id: 7,
       chapter: 2,
-      progress: 0,
+      progress: 50,
     },
     {
       id: 6,
@@ -88,14 +86,7 @@ function TaskNavigation() {
     });
   }
 
-  // <div className="container">
-  //   <div className="article"><img/></div>
-  //   <div className="article"><img /></div>
-  //   <div className="article"><img/></div>
-  // </div>;
-
   const chapterObjects = createChapterObjects(chapters, tasks);
-  console.log(chapterObjects[0].tasks);
 
   return (
     <div className={styles.section_container}>
@@ -151,19 +142,6 @@ function TaskNavigation() {
           </div>
         </div>
       ))}
-
-      {/* <ChapterTitle {...chapters[0]} />
-      {tasks
-        .filter((el) => el.chapter === 1)
-        .map((el) => (
-          <TaskSelect {...el} />
-        ))}
-      <ChapterTitle {...chapters[1]} />
-      {tasks
-        .filter((el) => el.chapter === 2)
-        .map((el) => (
-          <TaskSelect {...el} />
-        ))} */}
     </div>
   );
 }
