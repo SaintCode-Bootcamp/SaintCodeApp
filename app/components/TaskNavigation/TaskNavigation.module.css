@@ -1,0 +1,223 @@
+/* & создадим переменные для размеров */
+.section_container {
+  --task_width_container: 200px;
+  --task_height_container: 150px;
+  --border_width: 5px;
+  --right-shift: calc(var(--task_width_container) / 2);
+  --left-shift: calc((-1) * var(--task_width_container) / 2);
+}
+@media (min-width: 630px) {
+  .section_container {
+    --task_width_container: 300px;
+    --task_height_container: 180px;
+  }
+}
+
+.section_container {
+  padding-top: 70px;
+}
+/* & выравниваем каракас по середине */
+.progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: calc(var(--task_height_container) / 2);
+}
+/* & добавляем отступ между вторым разделом и первым квадратом второго раздела */
+.section_container > .chapter_container:nth-child(2) > .progress {
+  margin-top: calc(var(--task_height_container) / 2);
+}
+
+/* & каракас, вокруг котрого строятся пунктиры и отталикаются квадраты */
+.line_progress {
+  width: var(--task_width_container);
+  height: var(--task_height_container);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/*& двигаем вправо и влево четные и нечетные квадараты, и делаем так, чтобы линии были под ними */
+.section_container:nth-child(1) .line_progress:nth-child(odd) > .task_select {
+  transform: translate(var(--left-shift), 0);
+}
+.section_container:nth-child(1) .line_progress:nth-child(even) > .task_select {
+  transform: translate(var(--right-shift), 0);
+}
+.task_select {
+  z-index: 20;
+}
+
+.green_line_one {
+  height: calc(var(--task_height_container) / 2);
+  width: 0px;
+  border-left: var(--border_width) var(--green) dashed;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(odd) > .green_line_one {
+  transform: translate(var(--left-shift), 0);
+}
+
+.line_progress:nth-child(even) > .green_line_one {
+  transform: translate(var(--right-shift), 0);
+}
+
+.green_line_two {
+  height: var(--task_height_container);
+  width: var(--task_width_container);
+  position: absolute;
+  border-bottom: var(--border_width) var(--green) dashed;
+}
+
+.green_line_tree {
+  height: calc(var(--task_height_container) / 2);
+  width: 0px;
+  border-left: var(--border_width) var(--green) dashed;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+/* & сдвигаем третью линию с учетом половины ширины бордера */
+.line_progress:nth-child(even) > .green_line_tree {
+  transform: translate(calc(var(--left-shift) + var(--border_width) / 2), 0);
+}
+.line_progress:nth-child(odd) > .green_line_tree {
+  transform: translate(calc(var(--right-shift) - var(--border_width) / 2), 0);
+}
+
+.empty_line_one {
+  height: calc(var(--task_height_container) / 2);
+  width: 0px;
+  border-left: var(--border_width) var(--disabled) dashed;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(odd) > .empty_line_one {
+  transform: translate(var(--left-shift), 0);
+}
+
+.line_progress:nth-child(even) > .empty_line_one {
+  transform: translate(var(--right-shift), 0);
+}
+
+.empty_line_two {
+  height: var(--task_height_container);
+  width: var(--task_width_container);
+  position: absolute;
+  border-bottom: var(--border_width) var(--disabled) dashed;
+}
+
+.empty_line_tree {
+  height: calc(var(--task_height_container) / 2);
+  width: 0px;
+  border-left: var(--border_width) var(--disabled) dashed;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.line_progress:nth-child(even) > .empty_line_tree {
+  transform: translate(calc(var(--left-shift) + var(--border_width) / 2), 0);
+}
+.line_progress:nth-child(odd) > .empty_line_tree {
+  transform: translate(calc(var(--right-shift) - var(--border_width) / 2), 0);
+}
+
+/* & следующие три селектора для empty_line помогают создать конфигурацию линий на первом элементе второго раздела */
+.chapter_container:nth-child(2)
+  .line_progress:nth-child(1)
+  > .empty_line_one::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc((-1) * var(--border_width) / 2);
+  width: 100%;
+  height: calc(var(--task_height_container) / 2);
+  border-right: var(--border_width) var(--disabled) dashed;
+  transform: translateY(-150%);
+}
+
+.chapter_container:nth-child(2) .line_progress:nth-child(1) > .empty_line_two {
+  border-top: var(--border_width) var(--disabled) dashed;
+}
+.chapter_container:nth-child(2)
+  .line_progress:nth-child(1)
+  > .empty_line_two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc((-1) * var(--border_width) / 2);
+  width: 100%;
+  height: calc(var(--task_height_container) / 2);
+  border-right: var(--border_width) var(--disabled) dashed;
+  transform: translateY(-100%);
+}
+
+.violet_line_one {
+  height: calc(var(--task_height_container) / 2);
+  width: 0px;
+  border-left: var(--border_width) var(--violet) dashed;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+}
+
+.line_progress:nth-child(1) > .violet_line_one {
+  height: var(--task_height_container);
+  top: 0;
+  width: var(--task_width_container);
+  border-top: var(--border_width) var(--violet) dashed;
+}
+.line_progress:nth-child(1) > .violet_line_one {
+  transform: translate(0, 0);
+}
+.line_progress:nth-child(1) > .violet_line_one::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(var(--task_height_container) / 2);
+  border-right: var(--border_width) var(--violet) dashed;
+  transform: translateY(-100%);
+}
+
+.line_progress:nth-child(odd):not(1) > .violet_line_one {
+  transform: translate(var(--left-shift), 0);
+}
+
+.line_progress:nth-child(even) > .violet_line_one {
+  transform: translate(var(--right-shift), 0);
+}
+.violet_line_two {
+  height: var(--task_height_container);
+  width: var(--task_width_container);
+  position: absolute;
+  border-bottom: var(--border_width) var(--violet) dashed;
+}
+
+.violet_line_tree {
+  height: calc(var(--task_height_container) / 2);
+  width: 0px;
+  border-left: var(--border_width) var(--violet) dashed;
+
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+}
+
+.line_progress:nth-child(even) > .violet_line_tree  {
+  transform: translate(calc(var(--left-shift) + var(--border_width) / 2), 0);
+}
+.line_progress:nth-child(odd) > .violet_line_tree  {
+  transform: translate(calc(var(--right-shift) - var(--border_width) / 2), 0);
+}
+

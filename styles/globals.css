@@ -1,9 +1,12 @@
-html {
+
+html{
   color-scheme: light dark;
   --background: #252628;
-  --green: #59f881;
-  --violet: #af7cfa;
+  --green: #59F881;
+  --darkGreen: #314E39;
+  --violet: #AF7CFA;
   --white: #fff;
+  --disabled: #444444;
 }
 body {
   background-color: var(--background);

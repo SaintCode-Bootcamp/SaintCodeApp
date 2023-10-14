@@ -1,15 +1,16 @@
-import Link from 'next/link';
+import TaskNavigation from '../app/components/TaskNavigation/TaskNavigation';
+import { useEffect, useState } from 'react';
+import MenuHeader from '../app/components/MenuHeader/MenuHeader';
 
 export default function Home() {
+  const [active, setActive] = useState(true);
+  useEffect(() => {
+    setActive(active);
+  }, [active]);
   return (
     <>
-      <header>
-        <nav>
-          <Link href="login">Login</Link>
-        </nav>
-      </header>
-      <main>INFO</main>
-      <footer>FOOTER</footer>
+      <MenuHeader />
+      <TaskNavigation />
     </>
   );
 }

@@ -1,0 +1,27 @@
+.ct__container {
+  width: 100vw;
+  height: 100px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 20px;
+}
+.ct__green {
+  background-color: #314e39;
+}
+
+.ct__violet {
+  background-color: #3d3351;
+}
+
+.ct__title {
+  font-weight: 800;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.ct__text {
+  display: flex;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+}

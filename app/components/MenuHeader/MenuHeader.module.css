@@ -1,0 +1,24 @@
+
+.me__header{
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 20px 20px;
+  align-items: center;
+  position: fixed;
+  z-index: 30;
+  background-color: var(--background);
+}
+
+.me__logo{
+  height: 40px;
+  width: auto;
+}
+
+.me__avatar{
+  height: 40px;
+  width: 40px;
+  background-color: var(--background);
+  border-radius: 50%;
+}
