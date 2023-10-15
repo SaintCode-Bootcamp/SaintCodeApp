@@ -1,6 +1,8 @@
 # Progressive Web App Example
 
-This appp uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create a progressive web app (PWA) powered by [Workbox](https://developers.google.com/web/tools/workbox/).
+This app based on [CRA PWA template](https://create-react-app.dev/docs/making-a-progressive-web-app/) powered by [Workbox](https://developers.google.com/web/tools/workbox/).
+
+For tooling used Vite
 
 ## How to start
 
@@ -24,3 +26,7 @@ NEXTAUTH_URL=""
 ```bash
 npm run dev
 ```
+
+## Deploy
+
+TBD
