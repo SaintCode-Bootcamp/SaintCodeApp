@@ -2,6 +2,7 @@
   "name": "saintcode-pwa",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/SaintCodeApp",
   "dependencies": {
     "vite": "4.4.11",
     "react": "18.2.0",
