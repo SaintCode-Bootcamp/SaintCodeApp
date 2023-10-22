@@ -23,9 +23,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload dist repository
           path: './dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./dist
     
