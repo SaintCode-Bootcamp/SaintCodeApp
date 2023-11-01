@@ -19,7 +19,8 @@
     "@vitejs/plugin-react-swc": "3.4.0"
   },
   "overrides": {
-    "rollup-plugin-terser": "@rollup/plugin-terser@0.4.4"
+    "rollup-plugin-terser": "@rollup/plugin-terser@0.4.4",
+    "sourcemap-codec": "@jridgewell/sourcemap-codec@1.4.15"
   },
   "scripts": {
     "dev": "vite",
