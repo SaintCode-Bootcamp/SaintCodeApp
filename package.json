@@ -18,6 +18,9 @@
     "@vitejs/plugin-react": "4.1.0",
     "@vitejs/plugin-react-swc": "3.4.0"
   },
+  "overrides": {
+    "rollup-plugin-terser": "@rollup/plugin-terser@0.4.4"
+  },
   "scripts": {
     "dev": "vite",
     "build:dev": "APP_ENV=development vite build",
