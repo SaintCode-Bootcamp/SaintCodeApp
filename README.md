@@ -29,5 +29,5 @@ pnpm run dev
 
 ## Deploy
 
-Done by Github Actions to http://saintcodeapp.ru/
+Done by Github Actions to saintcodeapp.ru
 
