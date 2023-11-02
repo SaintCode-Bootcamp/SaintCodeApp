@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  base: process.env.APP_ENV === 'production' ? '/' : '/',
+  base: process.env.APP_ENV === 'production' ? '/SaintCodeApp/' : '/',
   build: {
     outDir: './dist',
     emptyOutDir: true,
