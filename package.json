@@ -12,18 +12,14 @@
     "vite-tsconfig-paths": "4.2.1"
   },
   "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "7.22.11",
     "@types/node": "^20.8.9",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
     "@vitejs/plugin-react": "4.1.0",
-    "@vitejs/plugin-react-swc": "3.4.0",
-    "rollup": "3.29.4",
-    "@rollup/plugin-terser": "0.4.4"
+    "@vitejs/plugin-react-swc": "3.4.0"
   },
-  "overrides": {
-    "rollup-plugin-terser": "@rollup/plugin-terser@0.4.4",
-    "sourcemap-codec": "@jridgewell/sourcemap-codec@1.4.15"
-  },
+  
   "scripts": {
     "dev": "vite",
     "build:dev": "APP_ENV=development vite build",
