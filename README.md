@@ -9,7 +9,7 @@ For tooling used Vite
 1. Install dependencies
 
 ```bash
-npm i
+pnpm i
 ```
 
 2. Add .env file that will have following variables
@@ -24,9 +24,10 @@ NEXTAUTH_URL=""
 3. Run app
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ## Deploy
 
-TBD
+Done by Github Actions to http://saintcodeapp.ru/
+
